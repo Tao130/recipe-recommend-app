@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">りょうり検索くん</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bottom_home_title">食材</string>
+    <string name="bottom_search_title">探す</string>
+    <string name="bottom_favorite_title">お気に入り</string>
+    <string name="delete_list">全て削除</string>
+    <string name="add">追加</string>
+    <string name="alert_text">全て削除しますか？</string>
+    <string name="cancel">やめる</string>
+    <string name="accept">削除する</string>
+    <string name="error_message1">良いレシピが見つかりませんでした\n食材を変えてみてください</string>
+    <string name="error_message_little">良いレシピが見つかりませんでした\n食材を増やしてみてください</string>
+    <string name="error_message_much">良いレシピが見つかりませんでした\n食材を減らしてみてください</string>
+    <string name="sever_error">サーバーとの接続ができませんでした\nネットワーク環境をお確かめください</string>
+    <string name="now_loading">レシピ検索中…</string>
+    <string name="search_text">レシピ検索を実行</string>
+</resources>

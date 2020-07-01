@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/SearchHomeFragment"
+        android:name="com.example.recipeapp.ui.search.SearchHomeFragment"
+        android:label="SearchHomeFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_SearchHomeFragment_self"
+            app:destination="@id/SearchHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.example.recipeapp.ui.favorite.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/showDetail"
+            app:destination="@id/favoriteDetailFragment" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.recipeapp.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/favoriteDetailFragment"
+        android:name="com.example.recipeapp.ui.favorite.FavoriteDetailFragment"
+        android:label="fragment_favorite_detail"
+        tools:layout="@layout/fragment_favorite_detail" >
+        <argument
+            android:name="recipe"
+            app:argType="string[]"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.example.recipeapp.ui.search.BeforeSearchFragment"
+        android:label="BeforeSearchFragment" >
+        <action
+            android:id="@+id/action_nav_search_to_SearchHomeFragment"
+            app:destination="@id/SearchHomeFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = ".;api";
+option java_multiple_files = true;
+option java_package = "package_name";
+option java_outer_classname = "RecipeRecommenderProtoV1";
+option objc_class_prefix = "HLW";
+
+message Recipes {
+    repeated Recipe recipe = 1;
+    string result_message = 2;
+    enum Result {
+        SUCCESS = 0;
+        ERROR_NO_RECIPE = 1;
+        ERROR_INVALID_PARAMS = 2;
+        ERROR_INTERNAL = 3;
+    }
+    Result result_code = 3;
+}
+
+message Recipe {
+    string title = 1;
+    string description = 2;
+    repeated Material required_materials = 3;
+    repeated string procedures = 4;/*Order matters*/
+    /*others*/
+}
+
+message Material {
+    string name = 1;
+    string unit = 2;
+}
+
+message Query {
+    repeated string favourite_foods = 1;
+    repeated string dislike_foods = 2;
+    int64 n = 3;
+    repeated string stored_spices = 4;
+}
+
+
+service Seeker {
+    rpc GetRecommendedRecipe(Query) returns (Recipes){}
+}

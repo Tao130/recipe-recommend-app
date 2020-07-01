@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/recipeTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:textAppearance="@style/TextAppearance.Title"
+                    app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/start_guideline"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="プロの味！簡単にして激ウマな豚汁の秘密 by こじまぽん助 【クックパッド】 簡単おいしいみんなのレシピが330万品" />
+
+                <TextView
+                    android:id="@+id/materialsText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="材料"
+                    android:textAppearance="@style/TextAppearance.Subtitle"
+                    app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/recipeTitle" />
+
+                <TextView
+                    android:id="@+id/materialList"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/materialsText"
+                    tools:text="豚バラ肉	300g\nごぼう	1本\n玉ねぎ 1個\n人参	1本\n大根 1/3本\n蒟蒻	1枚\nごま油 大さじ2\nにんにく(みじん切り) 1片\n生姜(チューブ) 3cm\n塩 ひとつまみ\n粉末かつおだし 小さじ2\n味噌	適量" />
+
+                <TextView
+                    android:id="@+id/procedureText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="調理手順"
+                    android:textAppearance="@style/TextAppearance.Subtitle"
+                    app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/materialList" />
+
+                <TextView
+                    android:id="@+id/procedureList"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+                    app:layout_constraintStart_toStartOf="@+id/start_guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/procedureText"
+                    tools:text="1	動画でチェック！YouTubeで「こじまぽん助」と検索♪このレシピよりも旨い「僕が家で作ってる」作り方を紹介してます！\n\n2	おかげさまでレシピ本にも掲載頂きました！ありがとうございま〜す^_^\n\n3	「ごぼう」今回のレシピの肝はこれ！泥ごぼうは丸めたアルミホイルで洗うよ！\n\n4	「下ごしらえ」ごぼう→2mm幅に斜め切り玉ねぎ→くし切り人参→いちょう切り大根→半月切り蒟蒻→ちぎって一煮立ち\n\n5	「これが秘密の技」十分に熱した鍋にごま油を馴染ませてごぼうをイン！これがとにかくいい味出してくれるんです！\n\n6	「香ばしく」このぐらいの焼き色に香ばしくなったら、一旦鍋からあげて...\n\n7	「お次は肉！」ガッツリ強火でこれまた表面を香ばしく！\n\n8	「焼き色」こんな感じね！肉の脂は十分に出たかな!?結構たくさん出るよ\n\n9	「にんにくと生姜」肉の旨味たっぷりの脂の中に入れて10秒後に...\n\n10	「全ての野菜をイン！」ここでごぼうも鍋に戻すよ！" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/start_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="16dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/end_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="26dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_gravity="bottom|end"
+            app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
